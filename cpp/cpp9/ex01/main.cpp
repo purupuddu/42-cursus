@@ -14,6 +14,13 @@ int main(int argc, char **argv)
     {
         arg += argv[i];
     }
-    std::cout << "expr = "<<arg<<std::endl;
-    std::cout << calc(arg.c_str()) << std::endl;
+    std::cout << "Expression: "<<arg<<std::endl;
+    try{
+        int res = RPN(arg).calc();
+        std::cout << "Result: " << res << std::endl;
+    } 
+    catch (std::runtime_error &e)
+    {
+        std::cout << "Error: " << e.what() << std::endl;
+    }
 }

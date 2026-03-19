@@ -18,7 +18,7 @@ INCLUDES  := $(wildcard *.hpp) $(wildcard *.tpp)
 OBJECTS = $(SOURCES:.cpp=.o)
 
 CC = c++
-CFLAGS =  -Wall -Wextra -Werror -g -std=c++98 #-fsanitize=address -fsanitize=undefined
+CFLAGS = -Wall -Wextra -Werror -g -std=c++98 #-fsanitize=address -fsanitize=undefined
 
 all: $(NAME)
 

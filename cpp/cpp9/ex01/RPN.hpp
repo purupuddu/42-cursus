@@ -1,4 +1,15 @@
 #pragma once
+#include <string>
 
-
-int calc(const char *s);
+class RPN{
+    private:
+        std::string expr;
+    public:
+        RPN();
+        ~RPN();
+        RPN(const RPN &rpn);
+        const RPN& operator = (const RPN &rpn);
+        RPN(const std::string &expr);
+        int calc() const;
+    
+};
